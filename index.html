@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de Produtos Eletrônicos">
+    <meta name="keywords" content="catálogo, produtos, eletrônicos">
+    <meta name="author" content="Alexandre">
+    <title>Catálogo de Produtos Eletrônicos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cabeçalho do site com menu superior e barra de pesquisa -->
+    <header>
+        <div class="top-bar">
+            <h1 class="logo">Eletrônicos Modernos</h1>
+            <!-- Campo de pesquisa -->
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Pesquisar produto...">
+                <button type="button" onclick="searchProduct()">Buscar</button>
+            </div>
+        </div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal -->
+    <section id="home" class="hero-section">
+        <h2>Bem-vindo ao Catálogo de Produtos Eletrônicos</h2>
+        <p>Explore nossa coleção de produtos modernos e de alta qualidade.</p>
+    </section>
+
+   <!-- Seção de produtos em destaque -->
+<section id="produtos" class="product-section">
+    <h2 class="section-title">Produtos em Destaque</h2>
+    <div class="product-container">
+        <!-- Produto 1 -->
+        <div class="product-card" onclick="showDetails('Mouse Logitech MX Master 3S','Oferece um sensor de alta precisão Darkfield com até 8.000 DPI, rolagem MagSpeed, botões personalizáveis e conectividade via Bluetooth e receptor USB Unifying. Ideal para longas jornadas de trabalho. Suas características físicas incluem um design ergonômico que acomoda a mão de forma natural, reduzindo a fadiga.')">
+            <img src="imagens/Mouse Logitech MX Master 3S.png" alt="Mouse Logitech MX Master 3S" class="product-image">
+            <h3 class="product-name">Mouse Logitech MX Master 3S</h3>
+            <p class="product-description">Um dos mouses premium mais populares, voltado para produtividade e ergonomia.</p>
+        </div>
+        <!-- Produto 2 -->
+        <div class="product-card" onclick="showDetails('Mouse Razer DeathAdder V2', 'Um mouse gamer de alta performance, conhecido por seu design confortável e precisão.')">
+            <img src="imagens/Mouse Razer DeathAdder V2.png" alt="Mouse Razer DeathAdder V2" class="product-image">
+            <h3 class="product-name">Mouse Razer DeathAdder V2</h3>
+            <p class="product-description">Um mouse gamer de alta performance, conhecido por seu design confortável e precisão.</p>
+        </div>
+        <!-- Produto 3 -->
+        <div class="product-card" onclick="showDetails('Teclado Mecânico Corsair K95 RGB Platinum', 'Equipado com switches Cherry MX Speed, oferece resposta rápida e feedback tátil. Possui iluminação RGB por tecla, estrutura em alumínio, macros dedicadas e descanso de pulso removível. Ótimo para quem deseja durabilidade e personalização.')">
+            <img src="imagens/Teclado Mecânico Corsair K95 RGB Platinum.jpg" alt="Teclado Mecânico Corsair K95 RGB Platinum" class="product-image">
+            <h3 class="product-name">Teclado Mecânico Corsair K95 RGB Platinum</h3>
+            <p class="product-description">Um teclado mecânico premium para gamers e usuários exigentes.</p>
+        </div>
+        <!-- Produto 4 -->
+        <div class="product-card" onclick="showDetails('Teclado Logitech MX Keys', 'Possui teclas de perfil baixo, construção sólida e conectividade multi-dispositivo. Sua retro iluminação inteligente acende quando as mãos se aproximam. Ideal para quem busca um teclado silencioso e confortável.')">
+            <img src="imagens/Teclado Logitech MX Keys.png" alt="Teclado Logitech MX Keys" class="product-image">
+            <h3 class="product-name">Teclado Logitech MX Keys</h3>
+            <p class="product-description">Teclado voltado para produtividade e conforto de digitação.</p>
+        </div>
+        <!-- Produto 5 -->
+        <div class="product-card" onclick="showDetails('Dell XPS 13', 'Equipado com processadores Intel Core de 13ª geração, display InfinityEdge 4K opcional, SSD NVMe, e até 16GB de RAM. Seu design compacto e leve é fácil de transportar, com bordas finas para maior aproveitamento de tela. A construção em alumínio e fibra de carbono proporciona uma sensação premium.')">
+            <img src="imagens/Dell XPS 13.png" alt="Dell XPS 13" class="product-image">
+            <h3 class="product-name">Dell XPS 13</h3>
+            <p class="product-description">Notebook ultrafino e poderoso, ideal para profissionais e estudantes.</p>
+        </div>
+        <!-- Produto 6 -->
+        <div class="product-card" onclick="showDetails('MacBook Pro 14 (M2)', 'Apresenta o chip M2, uma tela Liquid Retina XDR, bateria de longa duração e teclado Magic Keyboard. É uma excelente opção para criadores de conteúdo e desenvolvedores, oferecendo desempenho e eficiência energética em um formato elegante.')">
+            <img src="imagens/MacBook Pro 14 (M2).png" alt="MacBook Pro 14 (M2)" class="product-image">
+            <h3 class="product-name">MacBook Pro 14 (M2)</h3>
+            <p class="product-description">Notebook da Apple voltado para performance e design.</p>
+        </div>
+        <!-- Produto 7 -->
+        <div class="product-card" onclick="showDetails('Apple Watch Series 8', 'Monitora frequência cardíaca, níveis de oxigênio no sangue, ECG e sono. Oferece notificações, suporte a chamadas e SMS. A construção é em alumínio ou aço inoxidável, com opções de pulseiras personalizáveis. É resistente à água (até 50m) e tem tela Retina Always-On.')">
+            <img src="imagens/Apple Watch Series 8.png" alt="Apple Watch Series 8" class="product-image">
+            <h3 class="product-name">Apple Watch Series 8</h3>
+            <p class="product-description">Relógio inteligente com diversos recursos de saúde e conectividade.</p>
+        </div>
+        <!-- Produto 8 -->
+        <div class="product-card" onclick="showDetails('Samsung Galaxy Watch 6', 'Possui monitoramento de saúde avançado, GPS integrado, controle de músicas e notificações. É leve, com display Super AMOLED nítido e opções de pulseiras confortáveis. A bateria dura em média 2 dias, dependendo do uso.')">
+            <img src="imagens/Samsung Galaxy Watch 6.jpg" alt="Samsung Galaxy Watch 6" class="product-image">
+            <h3 class="product-name">Samsung Galaxy Watch 6</h3>
+            <p class="product-description">Smartwatch da Samsung com excelente integração ao ecossistema Android.</p>
+        </div>
+        <!-- Produto 9 -->
+        <div class="product-card" onclick="showDetails('Sony Alpha a7 III', 'Sensor Full-Frame de 24.2 MP, ISO expansível até 204.800, gravação 4K e estabilização de imagem de 5 eixos. Leve e compacta, possui construção robusta e resistência a poeira e respingos, ideal para fotografias e vídeos de alta qualidade.')">
+            <img src="imagens/Sony Alpha a7 III.jpg" alt="Sony Alpha a7 III" class="product-image">
+            <h3 class="product-name">Sony Alpha a7 III</h3>
+            <p class="product-description">Câmera mirrorless para entusiastas e profissionais.</p>
+        </div>
+        <!-- Produto 10 -->
+        <div class="product-card" onclick="showDetails('Canon EOS R5', 'Sensor de 45 MP, autofoco Dual Pixel CMOS II, gravação 8K e estabilização de imagem integrada. Tem corpo selado contra intempéries, visor OLED de alta resolução e tela articulada. É excelente para profissionais que desejam máxima qualidade de imagem.')">
+            <img src="imagens/Canon EOS R5.jpg" alt="Canon EOS R5" class="product-image">
+            <h3 class="product-name">Canon EOS R5</h3>
+            <p class="product-description">Câmera mirrorless topo de linha da Canon.</p>
+        </div>
+        <!-- Produto 12 -->
+        <div class="product-card" onclick="showDetails('Sony WH-1000XM5', 'Oferece som de alta fidelidade, conforto prolongado e recursos como controle de som adaptável e integração com assistentes de voz. A construção é robusta, com acabamento em couro sintético, e sua bateria dura até 30 horas.')">
+            <img src="imagens/Sony WH-1000XM5.jpeg" alt="Sony WH-1000XM5" class="product-image">
+            <h3 class="product-name">Sony WH-1000XM5</h3>
+            <p class="product-description">Fones de ouvido over-ear com cancelamento de ruído ativo líder de mercado.</p>
+        </div>
+        <!-- Produto 12 -->
+        <div class="product-card" onclick="showDetails('Apple AirPods Pro (2ª geração)', 'Oferecem ajuste seguro, som espacial, resistência à água e integração com dispositivos Apple. A case de carregamento proporciona até 24 horas de bateria.')">
+            <img src="imagens/Apple AirPods Pro (2ª geração).jpeg" alt="Canon EOS R5" class="product-image">
+            <h3 class="product-name">Apple AirPods Pro (2ª geração)</h3>
+            <p class="product-description">Fones intra-auriculares com cancelamento de ruído ativo e modo transparência.</p>
+        </div>
+        <!-- Mensagem de resultado no centro da seção de produtos -->
+        <div id="no-results-message" style="display: none; text-align: center; color: #006400; font-size: 18px; padding: 20px;">Nenhum produto encontrado</div>
+    </div>
+</section>
+
+
+        <!-- Produtos adicionais organizados verticalmente --
+        <div class="additional-products">
+            <-- Produto 6 ao Produto 25 --
+            <div class="product-card" onclick="showDetails('MacBook Pro 14 (M2)', 'Apresenta o chip M2, uma tela Liquid Retina XDR, bateria de longa duração e teclado Magic Keyboard. É uma excelente opção para criadores de conteúdo e desenvolvedores, oferecendo desempenho e eficiência energética em um formato elegante.')">
+                <img src="https://via.placeholder.com/150" alt="Produto 6" class="product-image">
+                <h3 class="product-name">MacBook Pro 14 (M2)</h3>
+                <p class="product-description">Notebook da Apple voltado para performance e design.</p>
+            </div>
+            <div class="product-card" onclick="showDetails('Apple Watch Series 8', 'Monitora frequência cardíaca, níveis de oxigênio no sangue, ECG e sono. Oferece notificações, suporte a chamadas e SMS. A construção é em alumínio ou aço inoxidável, com opções de pulseiras personalizáveis. É resistente à água (até 50m) e tem tela Retina Always-On.')">
+                <img src="https://via.placeholder.com/150" alt="Produto 7" class="product-image">
+                <h3 class="product-name">Apple Watch Series 8</h3>
+                <p class="product-description">Relógio inteligente com diversos recursos de saúde e conectividade.</p>
+            </div>
+            <-- Adicione mais produtos aqui até o Produto 25 -->
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about-section">
+        <h2 class="section-title">Sobre Nós</h2>
+        <p>Somos especializados em trazer os melhores produtos eletrônicos para nossos clientes, com qualidade e inovação.</p>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contact-section">
+        <h2 class="section-title">Entre em Contato</h2>
+        <p>Se você tiver dúvidas, entre em contato conosco pelo e-mail: contato@eletronicosmodernos.com</p>
+    </section>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>© 2024 Eletrônicos Modernos. Todos os direitos reservados.</p>
+        </footer>
+
+        <!-- Modal para detalhes do produto -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h3 id="modal-title">Detalhes do Produto</h3>
+                <p id="modal-description">Descrição do produto.</p>
+            </div>
+        </div>
+
+    <!-- Script JS para interatividade -->
+    <script>
+        // Função para mostrar detalhes do produto
+        function showDetails(title, description) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-description').innerText = description;
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Função de pesquisa que exibe apenas produtos com o nome correspondente e mostra mensagem de "Nenhum produto encontrado" no centro da seção
+function searchProduct() {
+    const searchValue = document.getElementById('search').value.toLowerCase();
+    const productCards = document.querySelectorAll('.product-card');
+    let found = false; // Variável para verificar se houve algum produto encontrado
+
+    productCards.forEach(card => {
+        const productName = card.querySelector('.product-name').innerText.toLowerCase();
+        if (productName.includes(searchValue)) {
+            card.style.display = 'block';
+            found = true; // Produto correspondente encontrado
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    // Exibe ou oculta a mensagem "Nenhum produto encontrado" com base na pesquisa
+    const noResultsMessage = document.getElementById('no-results-message');
+    const productSection = document.getElementById('produtos');
+
+    if (found) {
+        noResultsMessage.style.display = 'none'; // Oculta a mensagem se algum produto foi encontrado
+        productSection.style.justifyContent = 'flex-start'; // Mantém a seção organizada
+    } else {
+        noResultsMessage.style.display = 'block'; // Exibe a mensagem se nenhum produto for encontrado
+        productSection.style.justifyContent = 'center'; // Centraliza a mensagem
+    }
+}
+    </script>
+</body>
+</html>
